@@ -1,0 +1,15 @@
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.deps.json
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.dll
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\bin\Debug\netcoreapp3.1\Estapar.Domain.dll
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\bin\Debug\netcoreapp3.1\Estapar.Domain.pdb
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.csprojAssemblyReference.cache
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.AssemblyInfoInputs.cache
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.AssemblyInfo.cs
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.csproj.CopyComplete
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.runtimeconfig.json
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.runtimeconfig.dev.json
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.genruntimeconfig.cache
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.pdb
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.dll
+D:\Visual Studio\Estapar\src\Estapar.Infrastructure.Data\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.Data.pdb

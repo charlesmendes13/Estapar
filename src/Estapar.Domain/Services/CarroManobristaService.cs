@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Estapar.Domain
 {
-    public class CarroManobradoService : BaseService<CarroManobrista>, ICarroManobristaService
+    public class CarroManobristaService : BaseService<CarroManobrista>, ICarroManobristaService
     {
         private readonly ICarroManobristaRepository _carroManobristaRepository;
 
-        public CarroManobradoService(ICarroManobristaRepository carroManobristaRepository)
+        public CarroManobristaService(ICarroManobristaRepository carroManobristaRepository)
             : base(carroManobristaRepository)
         {
             _carroManobristaRepository = carroManobristaRepository;
