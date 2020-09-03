@@ -1,12 +1,12 @@
 D:\Visual Studio\Estapar\src\Estapar.Application\bin\Debug\netcoreapp3.1\Estapar.Application.deps.json
 D:\Visual Studio\Estapar\src\Estapar.Application\bin\Debug\netcoreapp3.1\Estapar.Application.dll
+D:\Visual Studio\Estapar\src\Estapar.Application\bin\Debug\netcoreapp3.1\Estapar.Application.pdb
 D:\Visual Studio\Estapar\src\Estapar.Application\bin\Debug\netcoreapp3.1\Estapar.Domain.dll
 D:\Visual Studio\Estapar\src\Estapar.Application\bin\Debug\netcoreapp3.1\Estapar.Domain.pdb
 D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.csprojAssemblyReference.cache
 D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.AssemblyInfoInputs.cache
 D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.AssemblyInfo.cs
-D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.csproj.CopyComplete
-D:\Visual Studio\Estapar\src\Estapar.Application\bin\Debug\netcoreapp3.1\Estapar.Application.pdb
 D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.csproj.CopyComplete
 D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.dll
 D:\Visual Studio\Estapar\src\Estapar.Application\obj\Debug\netcoreapp3.1\Estapar.Application.pdb
