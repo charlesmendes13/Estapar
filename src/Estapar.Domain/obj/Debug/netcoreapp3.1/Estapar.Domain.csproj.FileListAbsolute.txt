@@ -1,0 +1,9 @@
+D:\Visual Studio\Estapar\src\Estapar.Domain\bin\Debug\netcoreapp3.1\Estapar.Domain.deps.json
+D:\Visual Studio\Estapar\src\Estapar.Domain\bin\Debug\netcoreapp3.1\Estapar.Domain.dll
+D:\Visual Studio\Estapar\src\Estapar.Domain\bin\Debug\netcoreapp3.1\Estapar.Domain.pdb
+D:\Visual Studio\Estapar\src\Estapar.Domain\obj\Debug\netcoreapp3.1\Estapar.Domain.csprojAssemblyReference.cache
+D:\Visual Studio\Estapar\src\Estapar.Domain\obj\Debug\netcoreapp3.1\Estapar.Domain.AssemblyInfoInputs.cache
+D:\Visual Studio\Estapar\src\Estapar.Domain\obj\Debug\netcoreapp3.1\Estapar.Domain.AssemblyInfo.cs
+D:\Visual Studio\Estapar\src\Estapar.Domain\obj\Debug\netcoreapp3.1\Estapar.Domain.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Estapar\src\Estapar.Domain\obj\Debug\netcoreapp3.1\Estapar.Domain.dll
+D:\Visual Studio\Estapar\src\Estapar.Domain\obj\Debug\netcoreapp3.1\Estapar.Domain.pdb
