@@ -43,35 +43,48 @@ namespace Estapar.Infrastructure.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Carro = table.Column<int>(nullable: false),
-                    Manobrista = table.Column<int>(nullable: false)
+                    ResponsavelPorManobrar = table.Column<int>(nullable: false),
+                    CarroManobrado = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CarroManobrista", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CarroManobrista_Carro_Carro",
-                        column: x => x.Carro,
+                        name: "FK_CarroManobrista_Carro_CarroManobrado",
+                        column: x => x.CarroManobrado,
                         principalTable: "Carro",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CarroManobrista_Manobrista_Manobrista",
-                        column: x => x.Manobrista,
+                        name: "FK_CarroManobrista_Manobrista_ResponsavelPorManobrar",
+                        column: x => x.ResponsavelPorManobrar,
                         principalTable: "Manobrista",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CarroManobrista_Carro",
-                table: "CarroManobrista",
-                column: "Carro");
+                name: "IX_Carro_Placa",
+                table: "Carro",
+                column: "Placa",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_CarroManobrista_Manobrista",
+                name: "IX_CarroManobrista_CarroManobrado",
                 table: "CarroManobrista",
-                column: "Manobrista");
+                column: "CarroManobrado",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CarroManobrista_ResponsavelPorManobrar",
+                table: "CarroManobrista",
+                column: "ResponsavelPorManobrar");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Manobrista_CPF",
+                table: "Manobrista",
+                column: "CPF",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

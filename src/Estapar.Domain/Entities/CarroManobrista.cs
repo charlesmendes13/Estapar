@@ -7,15 +7,15 @@ namespace Estapar.Domain
 {
     [Table("CarroManobrista")]
     public class CarroManobrista : Base
-    {       
-        [Column("Carro")]
-        [ForeignKey("Carro")]
-        public virtual int IdCarro { get; set; }
-        public virtual Carro Carro { get; set; }
-
-        [Column("Manobrista")]
+    {
+        [Column("ResponsavelPorManobrar")]
         [ForeignKey("Manobrista")]
         public virtual int IdManobrista { get; set; }
         public virtual Manobrista Manobrista { get; set; }
+
+        [Column("CarroManobrado")]
+        [ForeignKey("Carro")]
+        public virtual int IdCarro { get; set; }
+        public virtual Carro Carro { get; set; }        
     }
 }

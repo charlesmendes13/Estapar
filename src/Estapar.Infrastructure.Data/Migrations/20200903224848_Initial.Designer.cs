@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Estapar.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200903222250_Initial")]
+    [Migration("20200903224848_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,9 +41,12 @@ namespace Estapar.Infrastructure.Data.Migrations
                     b.Property<string>("Placa")
                         .IsRequired()
                         .HasColumnName("Placa")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Placa")
+                        .IsUnique();
 
                     b.ToTable("Carro");
                 });
@@ -56,16 +59,17 @@ namespace Estapar.Infrastructure.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("IdCarro")
-                        .HasColumnName("Carro")
+                        .HasColumnName("CarroManobrado")
                         .HasColumnType("int");
 
                     b.Property<int>("IdManobrista")
-                        .HasColumnName("Manobrista")
+                        .HasColumnName("ResponsavelPorManobrar")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdCarro");
+                    b.HasIndex("IdCarro")
+                        .IsUnique();
 
                     b.HasIndex("IdManobrista");
 
@@ -82,7 +86,7 @@ namespace Estapar.Infrastructure.Data.Migrations
                     b.Property<string>("Cpf")
                         .IsRequired()
                         .HasColumnName("CPF")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnName("Data_Nascimento")
@@ -94,6 +98,9 @@ namespace Estapar.Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Cpf")
+                        .IsUnique();
 
                     b.ToTable("Manobrista");
                 });

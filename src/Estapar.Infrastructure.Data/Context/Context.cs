@@ -19,7 +19,22 @@ namespace Estapar.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);           
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Carro>(b =>
+            {
+                b.HasIndex(e => new { e.Placa }).IsUnique(true);
+            });
+
+            modelBuilder.Entity<CarroManobrista>(b =>
+            {
+                b.HasIndex(e => new { e.IdCarro }).IsUnique(true);
+            });
+
+            modelBuilder.Entity<Manobrista>(b =>
+            {
+                b.HasIndex(e => new { e.Cpf }).IsUnique(true);
+            });
         }
 
         public override int SaveChanges()
