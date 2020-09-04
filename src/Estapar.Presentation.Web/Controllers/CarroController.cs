@@ -72,7 +72,9 @@ namespace Estapar.Presentation.Web.Controllers
 
                 if (verificarPlaca != null)
                 {
-                    return Content("Placa já Cadastrada");
+                    TempData["Message"] = "Placa já Cadastrada";
+
+                    return View(carroDTO);
                 }
 
                 _carroAppService.Insert(carro);
@@ -124,7 +126,9 @@ namespace Estapar.Presentation.Web.Controllers
 
                     if (verificarPlaca != null)
                     {
-                        return Content("Placa já Cadastrada");
+                        TempData["Message"] = "Placa já Cadastrada";
+
+                        return View(carroDTO);
                     }
 
                     _carroAppService.Update(carro);

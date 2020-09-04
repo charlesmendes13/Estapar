@@ -81,7 +81,12 @@ namespace Estapar.Presentation.Web.Controllers
 
                 if (verificarCarro != null)
                 {
-                    return Content("Carro já Manobrado");
+                    ViewData["IdCarro"] = new SelectList(_carroAppService.Get(), "Id", "Placa", carroManobrista.IdCarro);
+                    ViewData["IdManobrista"] = new SelectList(_manobristaAppService.Get(), "Id", "Cpf", carroManobrista.IdManobrista);
+
+                    TempData["Message"] = "Carro já Manobrado";
+
+                    return View(carroManobristaDTO);
                 }
 
                 _carroManobristaAppService.Insert(carroManobrista);
@@ -139,7 +144,12 @@ namespace Estapar.Presentation.Web.Controllers
 
                     if (verificarCarro != null)
                     {
-                        return Content("Carro já Manobrado");
+                        ViewData["IdCarro"] = new SelectList(_carroAppService.Get(), "Id", "Placa", carroManobrista.IdCarro);
+                        ViewData["IdManobrista"] = new SelectList(_manobristaAppService.Get(), "Id", "Cpf", carroManobrista.IdManobrista);
+
+                        TempData["Message"] = "Carro já Manobrado";
+
+                        return View(carroManobristaDTO);
                     }                    
 
                     _carroManobristaAppService.Update(carroManobrista);

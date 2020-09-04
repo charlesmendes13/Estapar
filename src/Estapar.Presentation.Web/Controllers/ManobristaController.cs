@@ -72,7 +72,9 @@ namespace Estapar.Presentation.Web.Controllers
 
                 if (verificarCpf != null)
                 {
-                    return Content("CPF já Cadastrado");
+                    TempData["Message"] = "CPF já Cadastrado";
+
+                    return View(manobristaDTO);
                 }
 
                 _manobristaAppService.Insert(manobrista);
@@ -123,7 +125,9 @@ namespace Estapar.Presentation.Web.Controllers
 
                     if (verificarCpf != null)
                     {
-                        return Content("CPF já Cadastrado");
+                        TempData["Message"] = "CPF já Cadastrado";
+
+                        return View(manobristaDTO);
                     }
 
                     _manobristaAppService.Update(manobrista);
