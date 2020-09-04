@@ -1,9 +1,0 @@
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.deps.json
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.dll
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\bin\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.pdb
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.csprojAssemblyReference.cache
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.AssemblyInfoInputs.cache
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.AssemblyInfo.cs
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.csproj.CoreCompileInputs.cache
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.dll
-D:\Visual Studio\Estapar\src\Estapar.Infrastructure.CrossCutting\obj\Debug\netcoreapp3.1\Estapar.Infrastructure.CrossCutting.pdb

@@ -1512,16 +1512,6 @@
           "bin/placeholder/Estapar.Domain.dll": {}
         }
       },
-      "Estapar.Infrastructure.CrossCutting/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/Estapar.Infrastructure.CrossCutting.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Estapar.Infrastructure.CrossCutting.dll": {}
-        }
-      },
       "Estapar.Infrastructure.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5769,11 +5759,6 @@
       "path": "../Estapar.Domain/Estapar.Domain.csproj",
       "msbuildProject": "../Estapar.Domain/Estapar.Domain.csproj"
     },
-    "Estapar.Infrastructure.CrossCutting/1.0.0": {
-      "type": "project",
-      "path": "../Estapar.Infrastructure.CrossCutting/Estapar.Infrastructure.CrossCutting.csproj",
-      "msbuildProject": "../Estapar.Infrastructure.CrossCutting/Estapar.Infrastructure.CrossCutting.csproj"
-    },
     "Estapar.Infrastructure.Data/1.0.0": {
       "type": "project",
       "path": "../Estapar.Infrastructure.Data/Estapar.Infrastructure.Data.csproj",
@@ -5784,7 +5769,6 @@
     ".NETCoreApp,Version=v3.1": [
       "Estapar.Application >= 1.0.0",
       "Estapar.Domain >= 1.0.0",
-      "Estapar.Infrastructure.CrossCutting >= 1.0.0",
       "Estapar.Infrastructure.Data >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 3.1.7"
     ]
@@ -5820,9 +5804,6 @@
             },
             "D:\\Visual Studio\\Estapar\\src\\Estapar.Domain\\Estapar.Domain.csproj": {
               "projectPath": "D:\\Visual Studio\\Estapar\\src\\Estapar.Domain\\Estapar.Domain.csproj"
-            },
-            "D:\\Visual Studio\\Estapar\\src\\Estapar.Infrastructure.CrossCutting\\Estapar.Infrastructure.CrossCutting.csproj": {
-              "projectPath": "D:\\Visual Studio\\Estapar\\src\\Estapar.Infrastructure.CrossCutting\\Estapar.Infrastructure.CrossCutting.csproj"
             },
             "D:\\Visual Studio\\Estapar\\src\\Estapar.Infrastructure.Data\\Estapar.Infrastructure.Data.csproj": {
               "projectPath": "D:\\Visual Studio\\Estapar\\src\\Estapar.Infrastructure.Data\\Estapar.Infrastructure.Data.csproj"

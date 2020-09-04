@@ -5,22 +5,22 @@ using System.Text;
 
 namespace Estapar.Application
 {
-    public class CarroDTO
+    public class CarroDTO : BaseDTO
     {
-        [Required]
+        [Required(ErrorMessage = "A Marca não pode ser nula")]
         [MaxLength(255)]
         [RegularExpression(@"^[ a-zA-Z á]*$", ErrorMessage = "Digite uma Marca válida")]
         [Display(Name = "Marca")]
         public string Marca { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O Modelo não pode ser nulo")]
         [MaxLength(255)]
         [RegularExpression(@"^[ a-zA-Z á]*$", ErrorMessage = "Digite um Modelo válido")]
         [Display(Name = "Modelo")]
         public string Modelo { get; set; }
 
-        [Required]
-        [MaxLength(7)]
+        [Required(ErrorMessage = "A Placa não pode ser nula")]
+        [MaxLength(8)]
         [RegularExpression(@"[A-Z]{3}\ [0-9][0-9A-Z][0-9]{2}", ErrorMessage = "Digite uma Placa Mercosul válida")]
         [Display(Name = "Placa")]
         public string Placa { get; set; }

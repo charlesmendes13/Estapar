@@ -10,7 +10,6 @@
         "dependencies": {
           "Estapar.Application": "1.0.0",
           "Estapar.Domain": "1.0.0",
-          "Estapar.Infrastructure.CrossCutting": "1.0.0",
           "Estapar.Infrastructure.Data": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "3.1.7"
         },
@@ -1049,11 +1048,6 @@
           "Estapar.Domain.dll": {}
         }
       },
-      "Estapar.Infrastructure.CrossCutting/1.0.0": {
-        "runtime": {
-          "Estapar.Infrastructure.CrossCutting.dll": {}
-        }
-      },
       "Estapar.Infrastructure.Data/1.0.0": {
         "dependencies": {
           "Estapar.Domain": "1.0.0",
@@ -1777,11 +1771,6 @@
       "sha512": ""
     },
     "Estapar.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Estapar.Infrastructure.CrossCutting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

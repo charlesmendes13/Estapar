@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Estapar.Application
 {
-    public class CarroManobristaDTO
+    public class CarroManobristaDTO : BaseDTO
     {
         public int IdCarro { get; set; }
 
