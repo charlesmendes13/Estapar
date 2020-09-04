@@ -12,11 +12,11 @@ namespace Estapar.Domain
             : base(carroManobristaRepository)
         {
             _carroManobristaRepository = carroManobristaRepository;
-        }
+        }        
 
         public CarroManobrista VericiarCarro(int idCarro)
         {
             return _carroManobristaRepository.VericiarCarro(idCarro);
-        }
+        }       
     }
 }

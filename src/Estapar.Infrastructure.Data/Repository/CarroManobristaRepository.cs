@@ -14,11 +14,11 @@ namespace Estapar.Infrastructure.Data
             : base(context)
         {
             _context = context;
-        }
+        }        
 
         public CarroManobrista VericiarCarro(int idCarro)
         {
             return _context.CarroManobrista.FirstOrDefault(x => x.IdCarro == idCarro);
-        }
+        }       
     }
 }

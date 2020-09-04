@@ -6,6 +6,6 @@ namespace Estapar.Domain
 {
     public interface ICarroManobristaRepository : IBaseRepository<CarroManobrista>
     {
-        CarroManobrista VericiarCarro(int idCarro);
+        CarroManobrista VericiarCarro(int idCarro);       
     }
 }

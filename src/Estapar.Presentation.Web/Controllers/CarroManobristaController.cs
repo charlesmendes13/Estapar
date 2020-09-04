@@ -33,18 +33,9 @@ namespace Estapar.Presentation.Web.Controllers
         // GET: CarroManobrista
         public IActionResult Index()
         {
-            var carroManobristaDTO = (from carroManobristas in _carroManobristaAppService.Get()
-                                      join carros in _carroAppService.Get() on carroManobristas.IdCarro equals carros.Id
-                                      join manobristas in _manobristaAppService.Get() on carroManobristas.IdManobrista equals manobristas.Id
-                                      select new CarroManobristaDTO()
-                                      {
-                                          Id = carroManobristas.Id,
-                                          Modelo = carros.Modelo,
-                                          Placa = carros.Placa,
-                                          Nome = manobristas.Nome,
-                                          Cpf = manobristas.Cpf
-                                      })
-                                   .ToList();
+            var listaCarroManobrista = _carroManobristaAppService.ListarCarrosManobrista();
+
+            var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(listaCarroManobrista);
 
             return View(carroManobristaDTO);
         }
@@ -57,19 +48,9 @@ namespace Estapar.Presentation.Web.Controllers
                 return NotFound();
             }
 
-            var carroManobristaDTO = (from carroManobristas in _carroManobristaAppService.Get()
-                                      join carros in _carroAppService.Get() on carroManobristas.IdCarro equals carros.Id
-                                      join manobristas in _manobristaAppService.Get() on carroManobristas.IdManobrista equals manobristas.Id
-                                      where carroManobristas.Id == id
-                                      select new CarroManobristaDTO()
-                                      {
-                                          Id = carroManobristas.Id,
-                                          Modelo = carros.Modelo,
-                                          Placa = carros.Placa,
-                                          Nome = manobristas.Nome,
-                                          Cpf = manobristas.Cpf
-                                      })
-                                   .FirstOrDefault();
+            var carroManobrista = _carroManobristaAppService.CarrosManobrista((int)id);
+
+            var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(carroManobrista);
 
             if (carroManobristaDTO == null)
             {
@@ -187,19 +168,9 @@ namespace Estapar.Presentation.Web.Controllers
                 return NotFound();
             }
 
-            var carroManobristaDTO = (from carroManobristas in _carroManobristaAppService.Get()
-                                      join carros in _carroAppService.Get() on carroManobristas.IdCarro equals carros.Id
-                                      join manobristas in _manobristaAppService.Get() on carroManobristas.IdManobrista equals manobristas.Id
-                                      where carroManobristas.Id == id
-                                      select new CarroManobristaDTO()
-                                      {
-                                          Id = carroManobristas.Id,
-                                          Modelo = carros.Modelo,
-                                          Placa = carros.Placa,
-                                          Nome = manobristas.Nome,
-                                          Cpf = manobristas.Cpf
-                                      })
-                                      .FirstOrDefault();
+            var carroManobrista = _carroManobristaAppService.CarrosManobrista((int)id);
+
+            var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(carroManobrista);
 
             if (carroManobristaDTO == null)
             {
