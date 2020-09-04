@@ -7,5 +7,6 @@ namespace Estapar.Application
 {
     public interface ICarroManobristaAppService : IBaseAppService<CarroManobrista>
     {
+        CarroManobrista VericiarCarro(int idCarro);
     }
 }

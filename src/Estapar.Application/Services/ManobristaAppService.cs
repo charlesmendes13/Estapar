@@ -14,5 +14,10 @@ namespace Estapar.Application
         {
             _manobristaService = manobristaService;
         }
+
+        public Manobrista VerificarCpf(string cpf)
+        {
+            return _manobristaService.VerificarCpf(cpf);
+        }
     }
 }

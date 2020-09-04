@@ -8,6 +8,7 @@ namespace Estapar.Domain
     public class Base
     {
         [Required]
+        [Key]
         public virtual int Id { get; set; }
     }
 }

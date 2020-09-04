@@ -39,7 +39,14 @@ namespace Estapar.Infrastructure.Data
 
         public override int SaveChanges()
         {
-            return base.SaveChanges();
+            try
+            {
+                return base.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }            
         }
     }
 }

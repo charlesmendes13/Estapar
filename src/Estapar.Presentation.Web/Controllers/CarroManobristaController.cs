@@ -97,13 +97,17 @@ namespace Estapar.Presentation.Web.Controllers
             {
                 var carroManobrista = _mapper.Map<CarroManobrista>(carroManobristaDTO);
 
-                if (_carroManobristaAppService.Get().Any(x => x.IdCarro != carroManobrista.IdCarro))
-                {
-                    _carroManobristaAppService.Insert(carroManobrista);
-                    _carroManobristaAppService.Commit();
+                var vericiarCarro = _carroManobristaAppService.VericiarCarro(carroManobrista.IdCarro);
 
-                    return RedirectToAction(nameof(Index));
+                if (vericiarCarro != null)
+                {
+                    return Content("Carro já Manobrado");
                 }
+
+                _carroManobristaAppService.Insert(carroManobrista);
+                _carroManobristaAppService.Commit();
+
+                return RedirectToAction(nameof(Index));
             }
 
             ViewData["IdCarro"] = new SelectList(_carroAppService.Get(), "Id", "Placa");

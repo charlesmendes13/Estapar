@@ -7,5 +7,6 @@ namespace Estapar.Application
 {
     public interface IManobristaAppService : IBaseAppService<Manobrista>
     {
+        Manobrista VerificarCpf(string cpf);
     }
 }

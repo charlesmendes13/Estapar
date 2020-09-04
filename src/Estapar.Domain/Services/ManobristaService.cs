@@ -13,5 +13,10 @@ namespace Estapar.Domain
         {
             _manobristaRepository = manobristaRepository;
         }
+
+        public Manobrista VerificarCpf(string cpf)
+        {
+            return _manobristaRepository.VerificarCpf(cpf);
+        }
     }
 }

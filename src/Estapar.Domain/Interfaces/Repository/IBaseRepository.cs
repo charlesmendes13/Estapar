@@ -11,7 +11,7 @@ namespace Estapar.Domain
         void Insert(T entidade);
         void Update(T entidade);
         void Delete(T entidade);
-        void Commit();
+        int Commit();
         void Dispose();
     }
 }

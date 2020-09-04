@@ -7,5 +7,6 @@ namespace Estapar.Application
 {
     public interface ICarroAppService : IBaseAppService<Carro>
     {
+        Carro VerificarPlaca(string placa);
     }
 }

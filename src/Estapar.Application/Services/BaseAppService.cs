@@ -39,9 +39,9 @@ namespace Estapar.Application
             _service.Update(entidade);
         }
 
-        public void Commit()
+        public int Commit()
         {
-            _service.Commit();
+            return _service.Commit();
         }
 
         public void Dispose()

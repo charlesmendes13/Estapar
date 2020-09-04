@@ -38,9 +38,9 @@ namespace Estapar.Domain
             _repository.Update(entidade);
         }
 
-        public void Commit()
+        public int Commit()
         {
-            _repository.Commit();
+            return _repository.Commit();
         }
 
         public void Dispose()

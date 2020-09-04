@@ -6,5 +6,6 @@ namespace Estapar.Domain
 {
     public interface ICarroRepository : IBaseRepository<Carro>
     {
+        Carro VerificarPlaca(string placa);
     }
 }

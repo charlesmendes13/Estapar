@@ -68,6 +68,13 @@ namespace Estapar.Presentation.Web.Controllers
             {
                 var manobrista = _mapper.Map<Manobrista>(manobristaDTO);
 
+                var verificarCpf = _manobristaAppService.VerificarCpf(manobrista.Cpf);
+
+                if (verificarCpf != null)
+                {
+                    return Content("CPF já Cadastrado");
+                }
+
                 _manobristaAppService.Insert(manobrista);
                 _manobristaAppService.Commit();
 

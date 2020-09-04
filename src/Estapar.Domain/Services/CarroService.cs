@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Estapar.Domain
@@ -12,6 +13,11 @@ namespace Estapar.Domain
             : base(carroRepository)
         {
             _carroRepository = carroRepository;
+        }
+
+        public Carro VerificarPlaca(string placa)
+        {
+            return _carroRepository.VerificarPlaca(placa);
         }
     }
 }

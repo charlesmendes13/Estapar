@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Estapar.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200903224848_Initial")]
+    [Migration("20200904153856_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

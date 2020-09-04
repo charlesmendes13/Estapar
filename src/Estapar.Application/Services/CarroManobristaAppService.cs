@@ -14,5 +14,10 @@ namespace Estapar.Application
         {
             _carroManobristaService = carroManobristaService;
         }
+
+        public CarroManobrista VericiarCarro(int idCarro)
+        {
+            return _carroManobristaService.VericiarCarro(idCarro);
+        }
     }
 }

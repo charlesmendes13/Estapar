@@ -1,6 +1,7 @@
 ﻿using Estapar.Domain;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Estapar.Infrastructure.Data
@@ -13,6 +14,11 @@ namespace Estapar.Infrastructure.Data
             : base(context)
         {
             _context = context;
+        }
+
+        public CarroManobrista VericiarCarro(int idCarro)
+        {
+            return _context.CarroManobrista.FirstOrDefault(x => x.IdCarro == idCarro);
         }
     }
 }

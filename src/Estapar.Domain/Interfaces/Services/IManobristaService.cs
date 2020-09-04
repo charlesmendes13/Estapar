@@ -6,5 +6,6 @@ namespace Estapar.Domain
 {
     public interface IManobristaService : IBaseService<Manobrista>
     {
+        Manobrista VerificarCpf(string cpf);
     }
 }

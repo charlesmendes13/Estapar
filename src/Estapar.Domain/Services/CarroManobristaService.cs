@@ -13,5 +13,10 @@ namespace Estapar.Domain
         {
             _carroManobristaRepository = carroManobristaRepository;
         }
+
+        public CarroManobrista VericiarCarro(int idCarro)
+        {
+            return _carroManobristaRepository.VericiarCarro(idCarro);
+        }
     }
 }
