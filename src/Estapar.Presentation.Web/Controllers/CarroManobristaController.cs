@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Estapar.Domain;
-using Estapar.Infrastructure.Data;
 using AutoMapper;
 using Estapar.Application;
 
@@ -33,7 +32,7 @@ namespace Estapar.Presentation.Web.Controllers
         // GET: CarroManobrista
         public IActionResult Index()
         {
-            var listaCarroManobrista = _carroManobristaAppService.ListarCarrosManobrista();
+            var listaCarroManobrista = _carroManobristaAppService.ListarCarroManobrista();
 
             var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(listaCarroManobrista);
 
@@ -48,7 +47,7 @@ namespace Estapar.Presentation.Web.Controllers
                 return NotFound();
             }
 
-            var carroManobrista = _carroManobristaAppService.CarrosManobrista((int)id);
+            var carroManobrista = _carroManobristaAppService.CarroManobrista((int)id);
 
             var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(carroManobrista);
 
@@ -78,9 +77,9 @@ namespace Estapar.Presentation.Web.Controllers
             {
                 var carroManobrista = _mapper.Map<CarroManobrista>(carroManobristaDTO);
 
-                var vericiarCarro = _carroManobristaAppService.VericiarCarro(carroManobrista.IdCarro);
+                var verificarCarro = _carroManobristaAppService.VerificarCarrCreate(carroManobrista.IdCarro);
 
-                if (vericiarCarro != null)
+                if (verificarCarro != null)
                 {
                     return Content("Carro já Manobrado");
                 }
@@ -136,6 +135,13 @@ namespace Estapar.Presentation.Web.Controllers
                 {
                     var carroManobrista = _mapper.Map<CarroManobrista>(carroManobristaDTO);
 
+                    var verificarCarro = _carroManobristaAppService.VerificarCarroEdit(id, carroManobrista.IdCarro);
+
+                    if (verificarCarro != null)
+                    {
+                        return Content("Carro já Manobrado");
+                    }                    
+
                     _carroManobristaAppService.Update(carroManobrista);
                     _carroManobristaAppService.Commit();
 
@@ -168,7 +174,7 @@ namespace Estapar.Presentation.Web.Controllers
                 return NotFound();
             }
 
-            var carroManobrista = _carroManobristaAppService.CarrosManobrista((int)id);
+            var carroManobrista = _carroManobristaAppService.CarroManobrista((int)id);
 
             var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(carroManobrista);
 

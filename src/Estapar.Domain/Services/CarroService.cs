@@ -15,9 +15,14 @@ namespace Estapar.Domain
             _carroRepository = carroRepository;
         }
 
-        public Carro VerificarPlaca(string placa)
+        public Carro VerificarPlacaCreate(string placa)
         {
-            return _carroRepository.VerificarPlaca(placa);
+            return _carroRepository.VerificarPlacaCreate(placa);
+        }
+
+        public Carro VerificarPlacaEdit(int id, string placa)
+        {
+            return _carroRepository.VerificarPlacaEdit(id, placa);
         }
     }
 }

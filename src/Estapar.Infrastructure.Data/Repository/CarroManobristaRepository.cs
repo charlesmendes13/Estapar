@@ -1,4 +1,5 @@
 ﻿using Estapar.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,14 @@ namespace Estapar.Infrastructure.Data
             _context = context;
         }        
 
-        public CarroManobrista VericiarCarro(int idCarro)
+        public CarroManobrista VerificarCarrCreate(int idCarro)
         {
             return _context.CarroManobrista.FirstOrDefault(x => x.IdCarro == idCarro);
-        }       
+        }
+
+        public CarroManobrista VerificarCarroEdit(int id, int IdCarro)
+        {
+            return _context.CarroManobrista.FirstOrDefault(x => x.Id != id && x.IdCarro == IdCarro);
+        }
     }
 }

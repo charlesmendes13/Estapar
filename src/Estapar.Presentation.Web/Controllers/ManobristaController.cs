@@ -68,7 +68,7 @@ namespace Estapar.Presentation.Web.Controllers
             {
                 var manobrista = _mapper.Map<Manobrista>(manobristaDTO);
 
-                var verificarCpf = _manobristaAppService.VerificarCpf(manobrista.Cpf);
+                var verificarCpf = _manobristaAppService.VerificarCpfCreate(manobrista.Cpf);
 
                 if (verificarCpf != null)
                 {
@@ -118,6 +118,13 @@ namespace Estapar.Presentation.Web.Controllers
                 try
                 {
                     var manobrista = _mapper.Map<Manobrista>(manobristaDTO);
+
+                    var verificarCpf = _manobristaAppService.VerificarCpfEdit(id, manobrista.Cpf);
+
+                    if (verificarCpf != null)
+                    {
+                        return Content("CPF já Cadastrado");
+                    }
 
                     _manobristaAppService.Update(manobrista);
                     _manobristaAppService.Commit();

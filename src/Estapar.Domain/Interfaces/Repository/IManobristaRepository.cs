@@ -6,6 +6,8 @@ namespace Estapar.Domain
 {
     public interface IManobristaRepository : IBaseRepository<Manobrista>
     {
-        Manobrista VerificarCpf(string cpf);
+        Manobrista VerificarCpfCreate(string cpf);
+
+        Manobrista VerificarCpfEdit(int id, string cpf);
     }
 }

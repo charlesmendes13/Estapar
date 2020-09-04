@@ -7,10 +7,12 @@ namespace Estapar.Application
 {
     public interface ICarroManobristaAppService : IBaseAppService<CarroManobrista>
     {
-        CarroManobrista VericiarCarro(int idCarro);
+        CarroManobrista VerificarCarrCreate(int idCarro);
 
-        List<CarroManobristaDTO> ListarCarrosManobrista();
+        CarroManobrista VerificarCarroEdit(int id, int IdCarro);
 
-        CarroManobristaDTO CarrosManobrista(int id);
+        List<CarroManobristaDTO> ListarCarroManobrista();
+
+        CarroManobristaDTO CarroManobrista(int id);
     }
 }

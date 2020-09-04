@@ -1,4 +1,5 @@
 ﻿using Estapar.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +56,7 @@ namespace Estapar.Infrastructure.Data
         {
             try
             {
-                _context.Entry(entidade).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                _context.Entry(entidade).State = EntityState.Modified;               
             }
             catch (Exception ex)
             {

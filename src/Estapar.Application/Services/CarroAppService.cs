@@ -15,9 +15,14 @@ namespace Estapar.Application
             _carroService = carroService;
         }
 
-        public Carro VerificarPlaca(string placa)
+        public Carro VerificarPlacaCreate(string placa)
         {
-            return _carroService.VerificarPlaca(placa);
+            return _carroService.VerificarPlacaCreate(placa);
+        }
+
+        public Carro VerificarPlacaEdit(int id, string placa)
+        {
+            return _carroService.VerificarPlacaEdit(id, placa);
         }
     }
 }

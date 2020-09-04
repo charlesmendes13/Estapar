@@ -16,9 +16,14 @@ namespace Estapar.Infrastructure.Data
             _context = context;
         }
 
-        public Manobrista VerificarCpf(string cpf)
+        public Manobrista VerificarCpfCreate(string cpf)
         {
             return _context.Manobrista.FirstOrDefault(x => x.Cpf == cpf);
+        }
+
+        public Manobrista VerificarCpfEdit(int id, string cpf)
+        {
+            return _context.Manobrista.FirstOrDefault(x => x.Id != id && x.Cpf == cpf);
         }
     }
 }

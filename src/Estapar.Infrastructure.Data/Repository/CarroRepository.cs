@@ -16,9 +16,14 @@ namespace Estapar.Infrastructure.Data
             _context = context;
         }
 
-        public Carro VerificarPlaca(string placa)
+        public Carro VerificarPlacaCreate(string placa)
         {
             return _context.Carro.FirstOrDefault(x => x.Placa == placa);
+        }
+
+        public Carro VerificarPlacaEdit(int id, string placa)
+        {
+            return _context.Carro.FirstOrDefault(x => x.Id != id && x.Placa == placa);
         }
     }
 }

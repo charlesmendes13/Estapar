@@ -68,7 +68,7 @@ namespace Estapar.Presentation.Web.Controllers
             {
                 var carro = _mapper.Map<Carro>(carroDTO);
 
-                var verificarPlaca = _carroAppService.VerificarPlaca(carro.Placa);
+                var verificarPlaca = _carroAppService.VerificarPlacaCreate(carro.Placa);
 
                 if (verificarPlaca != null)
                 {
@@ -119,6 +119,13 @@ namespace Estapar.Presentation.Web.Controllers
                 try
                 {
                     var carro = _mapper.Map<Carro>(carroDTO);
+
+                    var verificarPlaca = _carroAppService.VerificarPlacaEdit(id, carro.Placa);
+
+                    if (verificarPlaca != null)
+                    {
+                        return Content("Placa já Cadastrada");
+                    }
 
                     _carroAppService.Update(carro);
                     _carroAppService.Commit();
