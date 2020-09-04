@@ -10,5 +10,7 @@ namespace Estapar.Application
         Carro VerificarPlacaCreate(string placa);
 
         Carro VerificarPlacaEdit(int id, string placa);
+
+        bool VerificarCarro(int id);
     }
 }

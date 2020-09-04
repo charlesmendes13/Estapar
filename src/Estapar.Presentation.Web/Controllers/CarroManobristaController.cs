@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -32,9 +29,7 @@ namespace Estapar.Presentation.Web.Controllers
         // GET: CarroManobrista
         public IActionResult Index()
         {
-            var listaCarroManobrista = _carroManobristaAppService.ListarCarroManobrista();
-
-            var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(listaCarroManobrista);
+            var carroManobristaDTO = _carroManobristaAppService.ListarCarroManobrista();
 
             return View(carroManobristaDTO);
         }
@@ -47,9 +42,7 @@ namespace Estapar.Presentation.Web.Controllers
                 return NotFound();
             }
 
-            var carroManobrista = _carroManobristaAppService.CarroManobrista((int)id);
-
-            var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(carroManobrista);
+            var carroManobristaDTO = _carroManobristaAppService.CarroManobrista((int)id);
 
             if (carroManobristaDTO == null)
             {
@@ -77,7 +70,7 @@ namespace Estapar.Presentation.Web.Controllers
             {
                 var carroManobrista = _mapper.Map<CarroManobrista>(carroManobristaDTO);
 
-                var verificarCarro = _carroManobristaAppService.VerificarCarrCreate(carroManobrista.IdCarro);
+                var verificarCarro = _carroManobristaAppService.VerificarCarroCreate(carroManobrista.IdCarro);
 
                 if (verificarCarro != null)
                 {
@@ -211,7 +204,7 @@ namespace Estapar.Presentation.Web.Controllers
 
         private bool CarroManobristaExists(int id)
         {
-            return _carroManobristaAppService.Get().Any(e => e.Id == id);
+            return _carroManobristaAppService.VerificarCarroManobrista(id);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Estapar.Infrastructure.Data
             _context = context;
         }        
 
-        public CarroManobrista VerificarCarrCreate(int idCarro)
+        public CarroManobrista VerificarCarroCreate(int idCarro)
         {
             return _context.CarroManobrista.FirstOrDefault(x => x.IdCarro == idCarro);
         }
@@ -25,6 +25,11 @@ namespace Estapar.Infrastructure.Data
         public CarroManobrista VerificarCarroEdit(int id, int IdCarro)
         {
             return _context.CarroManobrista.FirstOrDefault(x => x.Id != id && x.IdCarro == IdCarro);
+        }
+
+        public bool VerificarCarroManobrista(int id)
+        {
+            return _context.CarroManobrista.Any(e => e.Id == id);
         }
     }
 }

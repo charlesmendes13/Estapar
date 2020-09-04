@@ -14,7 +14,7 @@ namespace Estapar.Infrastructure.Data
             : base(context)
         {
             _context = context;
-        }
+        }       
 
         public Carro VerificarPlacaCreate(string placa)
         {
@@ -24,6 +24,11 @@ namespace Estapar.Infrastructure.Data
         public Carro VerificarPlacaEdit(int id, string placa)
         {
             return _context.Carro.FirstOrDefault(x => x.Id != id && x.Placa == placa);
+        }
+
+        public bool VerificarCarro(int id)
+        {
+            return _context.Carro.Any(e => e.Id == id);
         }
     }
 }

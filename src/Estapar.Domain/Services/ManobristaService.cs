@@ -23,5 +23,10 @@ namespace Estapar.Domain
         {
             return _manobristaRepository.VerificarCpfEdit(id, cpf);
         }
+
+        public bool VerificarManobrista(int id)
+        {
+            return _manobristaRepository.VerificarManobrista(id);
+        }
     }
 }

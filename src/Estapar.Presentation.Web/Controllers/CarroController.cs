@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Estapar.Domain;
-using Estapar.Infrastructure.Data;
 using Estapar.Application;
 using AutoMapper;
 
@@ -26,7 +21,7 @@ namespace Estapar.Presentation.Web.Controllers
         // GET: Carro
         public IActionResult Index()
         {
-            var carro = _carroAppService.Get().ToList();
+            var carro = _carroAppService.Get();
 
             var carroDTO = _mapper.Map<List<CarroDTO>>(carro);
 
@@ -187,7 +182,7 @@ namespace Estapar.Presentation.Web.Controllers
 
         private bool CarroExists(int id)
         {
-            return _carroAppService.Get().Any(e => e.Id == id);
+            return _carroAppService.VerificarCarro(id);
         }
     }
 }

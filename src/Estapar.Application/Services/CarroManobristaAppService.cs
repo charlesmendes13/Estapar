@@ -20,23 +20,13 @@ namespace Estapar.Application
             _carroManobristaService = carroManobristaService;
             _carroService = carroService;
             _manobristaService = manobristaService;
-        }        
-
-        public CarroManobrista VerificarCarrCreate(int idCarro)
-        {
-            return _carroManobristaService.VerificarCarrCreate(idCarro);
-        }
-
-        public CarroManobrista VerificarCarroEdit(int id, int IdCarro)
-        {
-            return _carroManobristaService.VerificarCarroEdit(id, IdCarro);
         }
 
         public List<CarroManobristaDTO> ListarCarroManobrista()
         {
             return (from carroManobristas in _carroManobristaService.Get().ToList()
                     join carros in _carroService.Get().ToList() on carroManobristas.IdCarro equals carros.Id
-                    join manobristas in _manobristaService.Get().ToList() on carroManobristas.IdManobrista equals manobristas.Id                   
+                    join manobristas in _manobristaService.Get().ToList() on carroManobristas.IdManobrista equals manobristas.Id
                     select new CarroManobristaDTO()
                     {
                         Id = carroManobristas.Id,
@@ -63,6 +53,21 @@ namespace Estapar.Application
                         Cpf = manobristas.Cpf
                     })
                     .FirstOrDefault();
-        }        
+        }
+
+        public CarroManobrista VerificarCarroCreate(int idCarro)
+        {
+            return _carroManobristaService.VerificarCarroCreate(idCarro);
+        }
+
+        public CarroManobrista VerificarCarroEdit(int id, int IdCarro)
+        {
+            return _carroManobristaService.VerificarCarroEdit(id, IdCarro);
+        }
+
+        public bool VerificarCarroManobrista(int id)
+        {
+            return _carroManobristaService.VerificarCarroManobrista(id);
+        }                
     }
 }

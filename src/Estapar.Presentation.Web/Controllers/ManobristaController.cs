@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Estapar.Domain;
-using Estapar.Infrastructure.Data;
-using AutoMapper;
 using Estapar.Application;
+using AutoMapper;
 
 namespace Estapar.Presentation.Web.Controllers
 {
@@ -26,7 +21,7 @@ namespace Estapar.Presentation.Web.Controllers
         // GET: Manobrista
         public IActionResult Index()
         {
-            var manobrista = _manobristaAppService.Get().ToList();
+            var manobrista = _manobristaAppService.Get();
 
             var manobristaDTO = _mapper.Map<List<ManobristaDTO>>(manobrista);
 
@@ -186,7 +181,7 @@ namespace Estapar.Presentation.Web.Controllers
 
         private bool ManobristaExists(int id)
         {
-            return _manobristaAppService.Get().Any(e => e.Id == id);
+            return _manobristaAppService.VerificarManobrista(id);
         }
     }
 }

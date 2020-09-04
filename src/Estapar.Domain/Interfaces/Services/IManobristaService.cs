@@ -9,5 +9,7 @@ namespace Estapar.Domain
         Manobrista VerificarCpfCreate(string cpf);
 
         Manobrista VerificarCpfEdit(int id, string cpf);
+
+        bool VerificarManobrista(int id);
     }
 }

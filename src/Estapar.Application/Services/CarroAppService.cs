@@ -13,7 +13,7 @@ namespace Estapar.Application
             : base(carroService)
         {
             _carroService = carroService;
-        }
+        }        
 
         public Carro VerificarPlacaCreate(string placa)
         {
@@ -23,6 +23,11 @@ namespace Estapar.Application
         public Carro VerificarPlacaEdit(int id, string placa)
         {
             return _carroService.VerificarPlacaEdit(id, placa);
+        }
+
+        public bool VerificarCarro(int id)
+        {
+            return _carroService.VerificarCarro(id);
         }
     }
 }

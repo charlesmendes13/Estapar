@@ -9,5 +9,7 @@ namespace Estapar.Domain
         Carro VerificarPlacaCreate(string placa);
 
         Carro VerificarPlacaEdit(int id, string placa);
+
+        bool VerificarCarro(int id);
     }
 }

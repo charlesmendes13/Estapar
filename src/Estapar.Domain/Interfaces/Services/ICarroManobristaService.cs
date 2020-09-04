@@ -6,8 +6,10 @@ namespace Estapar.Domain
 {
     public interface ICarroManobristaService : IBaseService<CarroManobrista>
     {
-        CarroManobrista VerificarCarrCreate(int idCarro);
+        CarroManobrista VerificarCarroCreate(int idCarro);
 
         CarroManobrista VerificarCarroEdit(int id, int IdCarro);
+
+        bool VerificarCarroManobrista(int id);
     }
 }

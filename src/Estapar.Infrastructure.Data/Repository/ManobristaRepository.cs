@@ -25,5 +25,10 @@ namespace Estapar.Infrastructure.Data
         {
             return _context.Manobrista.FirstOrDefault(x => x.Id != id && x.Cpf == cpf);
         }
+
+        public bool VerificarManobrista(int id)
+        {
+            return _context.Manobrista.Any(e => e.Id == id);
+        }
     }
 }

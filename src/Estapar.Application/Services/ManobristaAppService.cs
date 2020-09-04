@@ -24,5 +24,10 @@ namespace Estapar.Application
         {
             return _manobristaService.VerificarCpfEdit(id, cpf);
         }
+
+        public bool VerificarManobrista(int id)
+        {
+            return _manobristaService.VerificarManobrista(id);
+        }
     }
 }

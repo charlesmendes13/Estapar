@@ -13,7 +13,7 @@ namespace Estapar.Domain
             : base(carroRepository)
         {
             _carroRepository = carroRepository;
-        }
+        }        
 
         public Carro VerificarPlacaCreate(string placa)
         {
@@ -23,6 +23,11 @@ namespace Estapar.Domain
         public Carro VerificarPlacaEdit(int id, string placa)
         {
             return _carroRepository.VerificarPlacaEdit(id, placa);
+        }
+
+        public bool VerificarCarro(int id)
+        {
+            return _carroRepository.VerificarCarro(id);
         }
     }
 }
