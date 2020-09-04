@@ -17,7 +17,7 @@ namespace Estapar.Application
             CreateMap<Manobrista, ManobristaDTO>();
 
             CreateMap<CarroManobristaDTO, CarroManobrista>();
-            CreateMap<CarroManobrista, CarroManobristaDTO>();
+            CreateMap<CarroManobrista, CarroManobristaDTO>();           
         }
     }
 }

@@ -163,6 +163,11 @@ D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Es
 D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Estapar.Presentation.Web.TagHelpers.input.cache
 D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Estapar.Presentation.Web.TagHelpers.output.cache
 D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Estapar.Presentation.Web.RazorCoreGenerate.cache
+D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\CarroManobrista\Create.cshtml.g.cs
+D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\CarroManobrista\Delete.cshtml.g.cs
+D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\CarroManobrista\Details.cshtml.g.cs
+D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\CarroManobrista\Edit.cshtml.g.cs
+D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\CarroManobrista\Index.cshtml.g.cs
 D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Carro\Create.cshtml.g.cs
 D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Carro\Delete.cshtml.g.cs
 D:\Visual Studio\Estapar\src\Estapar.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Carro\Details.cshtml.g.cs
