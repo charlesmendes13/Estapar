@@ -177,14 +177,14 @@ namespace Estapar.Presentation.Web.Controllers
                 return NotFound();
             }
 
-            var carroManobrista = _carroManobristaAppService.CarroManobrista((int)id);
+            var carroManobrista = _carroManobristaAppService.CarroManobrista((int)id);            
 
-            var carroManobristaDTO = _mapper.Map<List<CarroManobristaDTO>>(carroManobrista);
-
-            if (carroManobristaDTO == null)
+            if (carroManobrista == null)
             {
                 return NotFound();
             }
+
+            var carroManobristaDTO = _mapper.Map<CarroManobristaDTO>(carroManobrista);
 
             return View(carroManobristaDTO);
         }
